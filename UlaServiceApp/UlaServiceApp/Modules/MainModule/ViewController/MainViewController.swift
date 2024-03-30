@@ -7,25 +7,58 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
+class WeatherViewController: UIViewController{
+    //ViewController Properties
+    private let output: MainViewOutput
+    private var mainModel: MainViewModel?
+    private var mainCellModel: [ServicesModel] = []
+    
+    private let collectionView: UICollectionView = {
+            let layout = UICollectionViewFlowLayout()
+            return UICollectionView(frame: .zero, collectionViewLayout: layout)
+    }()
+    
+    
+    init(output: MainViewOutput) {
+        self.output = output
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupUI()
+        
+        output.didLoadView()
+    }
+}
+
+private extension WeatherViewController {
+    func setupUI(){
         view.backgroundColor = .red
         
-        let network = MainNetworkManager.shared
-        network.fetchData { result in
-            switch result {
-            case .success(let services):
-                print(services)
-            case .failure(let error):
-                print(error)
-            }
-            
+        setupCollection()
+    }
+    
+    func setupCollection(){
+        
+    }
+}
+
+
+//Setup View by Presenter
+extension WeatherViewController: MainViewInput {
+    
+    func configure(with model: MainViewModel) {
+        self.mainCellModel = model.services
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
         }
     }
-
-
 }
 

@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+protocol MainModuleInput {
+    var moduleOutput: MainModuleOutput? { get }
+}
+
+protocol MainModuleOutput: AnyObject {
+}
+
+protocol MainViewInput: AnyObject {
+    func configure(with model: MainViewModel)
+}
+
+protocol MainViewOutput: AnyObject {
+    func didLoadView()
+}

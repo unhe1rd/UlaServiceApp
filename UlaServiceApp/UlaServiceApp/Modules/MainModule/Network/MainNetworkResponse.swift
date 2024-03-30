@@ -19,6 +19,6 @@ struct MainResponseBody: Codable {
 struct Service: Codable {
     let name: String
     let description: String
-    let link: URL
-    let icon_url: URL
+    let link: String
+    let icon_url: String
 }

@@ -71,9 +71,9 @@ final class MainNetworkManager {
     let networkManager = AlamofireNetworkManager()
     
     func fetchData(completion: @escaping (Result<MainNetworkResponse, Error>) -> Void) {
-        let cachePolicy: URLRequest.CachePolicy = .returnCacheDataElseLoad // Установка политики кэширования
+        let cachePolicy: URLRequest.CachePolicy = .returnCacheDataElseLoad
+        print(baseURL)
         networkManager.request(baseURL, cachePolicy: cachePolicy) { response in
-            
             switch response.result {
             case .success(let data):
                 do {
@@ -88,7 +88,6 @@ final class MainNetworkManager {
                     completion(.failure(error))
                 }
             }
-            
         }
     }
 }
