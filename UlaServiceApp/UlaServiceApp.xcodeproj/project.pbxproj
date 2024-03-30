@@ -9,13 +9,26 @@
 /* Begin PBXBuildFile section */
 		B46CA7132BB838A100B1221D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7122BB838A100B1221D /* AppDelegate.swift */; };
 		B46CA7152BB838A100B1221D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7142BB838A100B1221D /* SceneDelegate.swift */; };
-		B46CA7172BB838A100B1221D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7162BB838A100B1221D /* ViewController.swift */; };
-		B46CA71A2BB838A100B1221D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46CA7182BB838A100B1221D /* Main.storyboard */; };
+		B46CA7172BB838A100B1221D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7162BB838A100B1221D /* MainViewController.swift */; };
 		B46CA71C2BB838A600B1221D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46CA71B2BB838A600B1221D /* Assets.xcassets */; };
 		B46CA71F2BB838A600B1221D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46CA71D2BB838A600B1221D /* LaunchScreen.storyboard */; };
 		B46CA72A2BB838A700B1221D /* UlaServiceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7292BB838A700B1221D /* UlaServiceAppTests.swift */; };
 		B46CA7342BB838A700B1221D /* UlaServiceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7332BB838A700B1221D /* UlaServiceAppUITests.swift */; };
 		B46CA7362BB838A700B1221D /* UlaServiceAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7352BB838A700B1221D /* UlaServiceAppUITestsLaunchTests.swift */; };
+		B46CA7492BB83B1200B1221D /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7482BB83B1200B1221D /* MainProtocols.swift */; };
+		B46CA74F2BB83B4800B1221D /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA74E2BB83B4800B1221D /* MainAssembly.swift */; };
+		B46CA7532BB83B7300B1221D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7522BB83B7300B1221D /* MainPresenter.swift */; };
+		B46CA7562BB83B9C00B1221D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7552BB83B9C00B1221D /* MainViewModel.swift */; };
+		B46CA7582BB83C0200B1221D /* MainNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7572BB83C0200B1221D /* MainNetworkResponse.swift */; };
+		B46CA75B2BB83C3900B1221D /* MainNetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA75A2BB83C3900B1221D /* MainNetworkConstants.swift */; };
+		B46CA75D2BB83C4F00B1221D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA75C2BB83C4F00B1221D /* Constants.swift */; };
+		B46CA7602BB83E0B00B1221D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA75F2BB83E0B00B1221D /* Alamofire */; };
+		B46CA7622BB83E0B00B1221D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA7612BB83E0B00B1221D /* AlamofireDynamic */; };
+		B46CA7652BB83EBF00B1221D /* MainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA74B2BB83B3000B1221D /* MainManager.swift */; };
+		B46CA7672BB83F4000B1221D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA7662BB83F4000B1221D /* Alamofire */; };
+		B46CA7692BB83F4000B1221D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA7682BB83F4000B1221D /* AlamofireDynamic */; };
+		B46CA76B2BB83F6200B1221D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA76A2BB83F6200B1221D /* Alamofire */; };
+		B46CA76D2BB83F6200B1221D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA76C2BB83F6200B1221D /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +52,7 @@
 		B46CA70F2BB838A100B1221D /* UlaServiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UlaServiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46CA7122BB838A100B1221D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B46CA7142BB838A100B1221D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B46CA7162BB838A100B1221D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B46CA7192BB838A100B1221D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B46CA7162BB838A100B1221D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B46CA71B2BB838A600B1221D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B46CA71E2BB838A600B1221D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B46CA7202BB838A600B1221D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +61,14 @@
 		B46CA72F2BB838A700B1221D /* UlaServiceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UlaServiceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46CA7332BB838A700B1221D /* UlaServiceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UlaServiceAppUITests.swift; sourceTree = "<group>"; };
 		B46CA7352BB838A700B1221D /* UlaServiceAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UlaServiceAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B46CA7482BB83B1200B1221D /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		B46CA74B2BB83B3000B1221D /* MainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainManager.swift; sourceTree = "<group>"; };
+		B46CA74E2BB83B4800B1221D /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		B46CA7522BB83B7300B1221D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		B46CA7552BB83B9C00B1221D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B46CA7572BB83C0200B1221D /* MainNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkResponse.swift; sourceTree = "<group>"; };
+		B46CA75A2BB83C3900B1221D /* MainNetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkConstants.swift; sourceTree = "<group>"; };
+		B46CA75C2BB83C4F00B1221D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46CA7602BB83E0B00B1221D /* Alamofire in Frameworks */,
+				B46CA7622BB83E0B00B1221D /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46CA7672BB83F4000B1221D /* Alamofire in Frameworks */,
+				B46CA7692BB83F4000B1221D /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46CA76B2BB83F6200B1221D /* Alamofire in Frameworks */,
+				B46CA76D2BB83F6200B1221D /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +125,9 @@
 		B46CA7112BB838A100B1221D /* UlaServiceApp */ = {
 			isa = PBXGroup;
 			children = (
-				B46CA7122BB838A100B1221D /* AppDelegate.swift */,
-				B46CA7142BB838A100B1221D /* SceneDelegate.swift */,
-				B46CA7162BB838A100B1221D /* ViewController.swift */,
-				B46CA7182BB838A100B1221D /* Main.storyboard */,
-				B46CA71B2BB838A600B1221D /* Assets.xcassets */,
-				B46CA71D2BB838A600B1221D /* LaunchScreen.storyboard */,
-				B46CA7202BB838A600B1221D /* Info.plist */,
+				B46CA7432BB8391800B1221D /* Application */,
+				B46CA7442BB8392400B1221D /* Modules */,
+				B46CA7422BB838C300B1221D /* Supporting Files */,
 			);
 			path = UlaServiceApp;
 			sourceTree = "<group>";
@@ -127,6 +149,113 @@
 			path = UlaServiceAppUITests;
 			sourceTree = "<group>";
 		};
+		B46CA7422BB838C300B1221D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA71D2BB838A600B1221D /* LaunchScreen.storyboard */,
+				B46CA7202BB838A600B1221D /* Info.plist */,
+				B46CA71B2BB838A600B1221D /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B46CA7432BB8391800B1221D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA7122BB838A100B1221D /* AppDelegate.swift */,
+				B46CA7142BB838A100B1221D /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B46CA7442BB8392400B1221D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA7452BB8393400B1221D /* MainModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B46CA7452BB8393400B1221D /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA74A2BB83B2200B1221D /* Network */,
+				B46CA7542BB83B7D00B1221D /* Models */,
+				B46CA7462BB8394F00B1221D /* ViewController */,
+				B46CA7512BB83B6400B1221D /* Presenter */,
+				B46CA74D2BB83B3900B1221D /* Assembly */,
+				B46CA7472BB83B0200B1221D /* Protocols */,
+				B46CA7502BB83B4D00B1221D /* Subviews and Cells */,
+				B46CA76E2BB841EF00B1221D /* MainModuleConstants */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		B46CA7462BB8394F00B1221D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA7162BB838A100B1221D /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B46CA7472BB83B0200B1221D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA7482BB83B1200B1221D /* MainProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B46CA74A2BB83B2200B1221D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA74B2BB83B3000B1221D /* MainManager.swift */,
+				B46CA7572BB83C0200B1221D /* MainNetworkResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B46CA74D2BB83B3900B1221D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA74E2BB83B4800B1221D /* MainAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B46CA7502BB83B4D00B1221D /* Subviews and Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Subviews and Cells";
+			sourceTree = "<group>";
+		};
+		B46CA7512BB83B6400B1221D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA7522BB83B7300B1221D /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B46CA7542BB83B7D00B1221D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA7552BB83B9C00B1221D /* MainViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B46CA76E2BB841EF00B1221D /* MainModuleConstants */ = {
+			isa = PBXGroup;
+			children = (
+				B46CA75A2BB83C3900B1221D /* MainNetworkConstants.swift */,
+				B46CA75C2BB83C4F00B1221D /* Constants.swift */,
+			);
+			path = MainModuleConstants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +272,10 @@
 			dependencies = (
 			);
 			name = UlaServiceApp;
+			packageProductDependencies = (
+				B46CA75F2BB83E0B00B1221D /* Alamofire */,
+				B46CA7612BB83E0B00B1221D /* AlamofireDynamic */,
+			);
 			productName = UlaServiceApp;
 			productReference = B46CA70F2BB838A100B1221D /* UlaServiceApp.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +294,10 @@
 				B46CA7272BB838A700B1221D /* PBXTargetDependency */,
 			);
 			name = UlaServiceAppTests;
+			packageProductDependencies = (
+				B46CA7662BB83F4000B1221D /* Alamofire */,
+				B46CA7682BB83F4000B1221D /* AlamofireDynamic */,
+			);
 			productName = UlaServiceAppTests;
 			productReference = B46CA7252BB838A700B1221D /* UlaServiceAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -179,6 +316,10 @@
 				B46CA7312BB838A700B1221D /* PBXTargetDependency */,
 			);
 			name = UlaServiceAppUITests;
+			packageProductDependencies = (
+				B46CA76A2BB83F6200B1221D /* Alamofire */,
+				B46CA76C2BB83F6200B1221D /* AlamofireDynamic */,
+			);
 			productName = UlaServiceAppUITests;
 			productReference = B46CA72F2BB838A700B1221D /* UlaServiceAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -215,6 +356,9 @@
 				Base,
 			);
 			mainGroup = B46CA7062BB838A100B1221D;
+			packageReferences = (
+				B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B46CA7102BB838A100B1221D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +377,6 @@
 			files = (
 				B46CA71F2BB838A600B1221D /* LaunchScreen.storyboard in Resources */,
 				B46CA71C2BB838A600B1221D /* Assets.xcassets in Resources */,
-				B46CA71A2BB838A100B1221D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +401,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B46CA7172BB838A100B1221D /* ViewController.swift in Sources */,
+				B46CA7652BB83EBF00B1221D /* MainManager.swift in Sources */,
+				B46CA7492BB83B1200B1221D /* MainProtocols.swift in Sources */,
+				B46CA75D2BB83C4F00B1221D /* Constants.swift in Sources */,
+				B46CA7172BB838A100B1221D /* MainViewController.swift in Sources */,
+				B46CA75B2BB83C3900B1221D /* MainNetworkConstants.swift in Sources */,
 				B46CA7132BB838A100B1221D /* AppDelegate.swift in Sources */,
+				B46CA7582BB83C0200B1221D /* MainNetworkResponse.swift in Sources */,
+				B46CA74F2BB83B4800B1221D /* MainAssembly.swift in Sources */,
+				B46CA7532BB83B7300B1221D /* MainPresenter.swift in Sources */,
 				B46CA7152BB838A100B1221D /* SceneDelegate.swift in Sources */,
+				B46CA7562BB83B9C00B1221D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +448,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B46CA7182BB838A100B1221D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B46CA7192BB838A100B1221D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B46CA71D2BB838A600B1221D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,9 +590,9 @@
 				INFOPLIST_FILE = UlaServiceApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,9 +618,9 @@
 				INFOPLIST_FILE = UlaServiceApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +750,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B46CA75F2BB83E0B00B1221D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B46CA7612BB83E0B00B1221D /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		B46CA7662BB83F4000B1221D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B46CA7682BB83F4000B1221D /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		B46CA76A2BB83F6200B1221D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B46CA76C2BB83F6200B1221D /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B46CA7072BB838A100B1221D /* Project object */;
 }
