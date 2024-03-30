@@ -30,6 +30,7 @@
 		B46CA76B2BB83F6200B1221D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA76A2BB83F6200B1221D /* Alamofire */; };
 		B46CA76D2BB83F6200B1221D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA76C2BB83F6200B1221D /* AlamofireDynamic */; };
 		B46CA7712BB8572500B1221D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA7702BB8572500B1221D /* Kingfisher */; };
+		B46CA7732BB8609600B1221D /* MainServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7722BB8609600B1221D /* MainServiceCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		B46CA7572BB83C0200B1221D /* MainNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkResponse.swift; sourceTree = "<group>"; };
 		B46CA75A2BB83C3900B1221D /* MainNetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkConstants.swift; sourceTree = "<group>"; };
 		B46CA75C2BB83C4F00B1221D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B46CA7722BB8609600B1221D /* MainServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainServiceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		B46CA7502BB83B4D00B1221D /* Subviews and Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B46CA7722BB8609600B1221D /* MainServiceCell.swift */,
 			);
 			path = "Subviews and Cells";
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				B46CA7582BB83C0200B1221D /* MainNetworkResponse.swift in Sources */,
 				B46CA74F2BB83B4800B1221D /* MainAssembly.swift in Sources */,
 				B46CA7532BB83B7300B1221D /* MainPresenter.swift in Sources */,
+				B46CA7732BB8609600B1221D /* MainServiceCell.swift in Sources */,
 				B46CA7152BB838A100B1221D /* SceneDelegate.swift in Sources */,
 				B46CA7562BB83B9C00B1221D /* MainViewModel.swift in Sources */,
 			);

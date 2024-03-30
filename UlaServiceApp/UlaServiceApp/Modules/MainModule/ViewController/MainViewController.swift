@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController{
+class MainViewController: UIViewController{
     //ViewController Properties
     private let output: MainViewOutput
     private var mainModel: MainViewModel?
@@ -38,21 +38,53 @@ class WeatherViewController: UIViewController{
     }
 }
 
-private extension WeatherViewController {
+private extension MainViewController {
     func setupUI(){
         view.backgroundColor = .red
         
-        setupCollection()
+        setupCollectionView()
     }
     
-    func setupCollection(){
+    func setupCollectionView() {
+            collectionView.delegate = self
+            collectionView.dataSource = self
+            collectionView.register(MainServiceCell.self, forCellWithReuseIdentifier: "MainServiceCell")
+//            collectionView.register(MainServiceCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MainServiceCell.identifier)
+            collectionView.backgroundColor = .white
+            collectionView.showsVerticalScrollIndicator = false
+            
+            constraintsCollectionView()
+        }
         
+        func constraintsCollectionView() {
+            collectionView.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+                collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        }
+}
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        mainCellModel.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainFilmCell", for: indexPath) as! MainServiceCell
+        cell.configure(with: mainCellModel[indexPath.row])
+        return cell
+    }
+    
+    
 }
 
 
 //Setup View by Presenter
-extension WeatherViewController: MainViewInput {
+extension MainViewController: MainViewInput {
     
     func configure(with model: MainViewModel) {
         self.mainCellModel = model.services
