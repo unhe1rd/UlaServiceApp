@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-final class WeatherAssembly {
-    static func assembly(moduleOutput: WeatherModuleOutput? = nil) -> UIViewController {
-        let presenter = WeatherPresenter()
-        let viewController = WeatherViewController(output: presenter)
+final class MainAssembly {
+    static func assembly(moduleOutput: MainModuleOutput? = nil) -> UIViewController {
+        let presenter = MainPresenter()
+        let viewController = MainViewController(output: presenter)
 
         presenter.view = viewController
         presenter.moduleOutput = moduleOutput

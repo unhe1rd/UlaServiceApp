@@ -34,8 +34,8 @@ final class MainServiceCell: UICollectionViewCell {
 
 private extension MainServiceCell {
     func setupCell() {
+        
         setupAppImage()
-
     }
     
     func setupAppImage() {
@@ -44,6 +44,8 @@ private extension MainServiceCell {
         
         
         NSLayoutConstraint.activate([
+            appImage.widthAnchor.constraint(equalToConstant: 100),
+            appImage.heightAnchor.constraint(equalToConstant: 100),
             appImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             appImage.topAnchor.constraint(equalTo: topAnchor, constant: 12)
         ])

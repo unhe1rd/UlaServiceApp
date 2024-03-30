@@ -28,18 +28,19 @@ private extension MainPresenter {
     
     func loadData() {
         let networkManager = MainNetworkManager.shared
-        networkManager.fetchData { result in
-            switch result {
-            case .success(let services):
-                self?.updateUI(with: services)
-            case .failure(let error):
-                print(error)
+        networkManager.fetchData { [weak self] result in
+            DispatchQueue.global().async {
+                switch result {
+                case .success(let services):
+                    self?.updateUI(with: services)
+                case .failure(let error):
+                    print(error)
+                }
             }
         }
     }
     
     func updateUI(with services: MainNetworkResponse) {
-        
     
         let servicesModel = services.body.services.map { servise in
             return ServicesModel (
