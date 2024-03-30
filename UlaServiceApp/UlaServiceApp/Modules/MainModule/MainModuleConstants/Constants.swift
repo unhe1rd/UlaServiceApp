@@ -5,4 +5,8 @@
 //  Created by Mike Ulanov on 30.03.2024.
 //
 
-import Foundation
+import UIKit
+
+enum Constants{
+    static let textColor = UIColor.darkText
+}
