@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,15 +23,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="W0V-5i-AYj">
-                                <rect key="frame" x="26" y="256" width="341.33333333333337" height="341.33333333333326"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Aj8-B8-ncL">
+                                <rect key="frame" x="-22" y="0.0" width="440" height="852"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="W0V-5i-AYj" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="197" id="9H4-U1-poa"/>
-                            <constraint firstAttribute="trailing" secondItem="W0V-5i-AYj" secondAttribute="trailing" constant="25.666666666666629" id="YQC-Yh-n5E"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="top" secondItem="Aj8-B8-ncL" secondAttribute="top" constant="59" id="BEf-ZN-ZWr"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="leading" secondItem="Aj8-B8-ncL" secondAttribute="leading" constant="22" id="eqT-Pv-Oyk"/>
+                            <constraint firstItem="Aj8-B8-ncL" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" constant="25" id="n7y-Lw-cfE"/>
+                            <constraint firstItem="Aj8-B8-ncL" firstAttribute="bottom" secondItem="Bcu-3y-fUS" secondAttribute="bottom" constant="34" id="t1z-EO-902"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -42,9 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundImage" width="341.33334350585938" height="341.33334350585938"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="background" width="720" height="1436"/>
     </resources>
 </document>

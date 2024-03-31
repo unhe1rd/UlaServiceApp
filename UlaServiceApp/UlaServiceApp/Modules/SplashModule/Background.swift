@@ -48,7 +48,7 @@ struct BackgroundView: View {
             if imageOnBackground == true {
                 Image("backgroundImage")
                    .resizable()
-                   .frame(width: 400, height: 400)
+                   .frame(width: 393, height: 373)
                    .shadow(color: .white, radius: 5)
             }
         }
