@@ -2,13 +2,13 @@
 Тестовое задание в Юлу
 
 Очень просто установить:
-\```console
+```console
   git clone git@github.com:unhe1rd/UlaServiceApp.git
 
   #or
   
   git clone https://github.com/unhe1rd/UlaServiceApp.git
-\```
+```
 
 Логотип совсем не похож...
 
