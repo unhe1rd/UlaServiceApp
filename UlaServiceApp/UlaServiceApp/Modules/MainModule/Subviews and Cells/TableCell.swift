@@ -60,7 +60,6 @@ private extension TableCell {
     func setupTitleLabel(){
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textColor = Constants.textColor
         titleLabel.textAlignment = .left
         titleLabel.font = .boldSystemFont(ofSize: 18)
         
@@ -74,7 +73,6 @@ private extension TableCell {
     func setupDescriptionLabel() {
         addSubview(descriptionLabel)
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.textColor = Constants.textColor
         descriptionLabel.font = .systemFont(ofSize: 14)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .left

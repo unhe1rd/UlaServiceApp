@@ -5,7 +5,6 @@
 //  Created by Mike Ulanov on 31.03.2024.
 //
 
-
 import UIKit
 
 final class TableHeader: UIView {
@@ -33,13 +32,13 @@ final class TableHeader: UIView {
         headerLabel.text = "Сервисы"
         headerLabel.font = .boldSystemFont(ofSize: 24)
         headerLabel.textAlignment = .center
-        headerLabel.textColor = Constants.textColor
         
         NSLayoutConstraint.activate([
-            headerLabel.topAnchor.constraint(equalTo: topAnchor),
-            headerLabel.leftAnchor.constraint(equalTo: leftAnchor),
-            headerLabel.rightAnchor.constraint(equalTo: rightAnchor),
-            headerLabel.heightAnchor.constraint(equalToConstant: 32)
+            headerLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            headerLabel.leftAnchor.constraint(equalTo: self.leftAnchor),
+            headerLabel.rightAnchor.constraint(equalTo: self.rightAnchor),
+            headerLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
 }
+

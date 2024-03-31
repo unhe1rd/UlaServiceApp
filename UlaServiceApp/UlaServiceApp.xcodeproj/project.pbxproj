@@ -11,7 +11,7 @@
 		B4342C932BB9A6EF004D109A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B4342C922BB9A6EF004D109A /* Alamofire */; };
 		B4342C952BB9A6F4004D109A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B4342C942BB9A6F4004D109A /* Alamofire */; };
 		B4342C972BB9A87D004D109A /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C962BB9A87D004D109A /* DeeplinkManager.swift */; };
-		B4342C992BB9AC1F004D109A /* MainViewControllerWithTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C982BB9AC1F004D109A /* MainViewControllerWithTableView.swift */; };
+		B4342C992BB9AC1F004D109A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C982BB9AC1F004D109A /* MainViewController.swift */; };
 		B4342C9B2BB9AD1B004D109A /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C9A2BB9AD1B004D109A /* TableCell.swift */; };
 		B4342C9D2BB9AD8F004D109A /* TableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C9C2BB9AD8F004D109A /* TableHeader.swift */; };
 		B45029622BB9C98C00E3E6C8 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45029612BB9C98C00E3E6C8 /* Background.swift */; };
@@ -19,7 +19,6 @@
 		B450296F2BB9DC7F00E3E6C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B450296E2BB9DC7F00E3E6C8 /* LaunchScreen.storyboard */; };
 		B46CA7132BB838A100B1221D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7122BB838A100B1221D /* AppDelegate.swift */; };
 		B46CA7152BB838A100B1221D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7142BB838A100B1221D /* SceneDelegate.swift */; };
-		B46CA7172BB838A100B1221D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7162BB838A100B1221D /* MainViewController.swift */; };
 		B46CA71C2BB838A600B1221D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46CA71B2BB838A600B1221D /* Assets.xcassets */; };
 		B46CA72A2BB838A700B1221D /* UlaServiceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7292BB838A700B1221D /* UlaServiceAppTests.swift */; };
 		B46CA7342BB838A700B1221D /* UlaServiceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7332BB838A700B1221D /* UlaServiceAppUITests.swift */; };
@@ -67,7 +66,7 @@
 
 /* Begin PBXFileReference section */
 		B4342C962BB9A87D004D109A /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
-		B4342C982BB9AC1F004D109A /* MainViewControllerWithTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerWithTableView.swift; sourceTree = "<group>"; };
+		B4342C982BB9AC1F004D109A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B4342C9A2BB9AD1B004D109A /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		B4342C9C2BB9AD8F004D109A /* TableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeader.swift; sourceTree = "<group>"; };
 		B45029612BB9C98C00E3E6C8 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -76,7 +75,6 @@
 		B46CA70F2BB838A100B1221D /* UlaServiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UlaServiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46CA7122BB838A100B1221D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B46CA7142BB838A100B1221D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B46CA7162BB838A100B1221D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B46CA71B2BB838A600B1221D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B46CA7202BB838A600B1221D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "UlaServiceApp/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		B46CA7252BB838A700B1221D /* UlaServiceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UlaServiceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,8 +232,7 @@
 		B46CA7462BB8394F00B1221D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B46CA7162BB838A100B1221D /* MainViewController.swift */,
-				B4342C982BB9AC1F004D109A /* MainViewControllerWithTableView.swift */,
+				B4342C982BB9AC1F004D109A /* MainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -449,8 +446,7 @@
 				B46CA7492BB83B1200B1221D /* MainProtocols.swift in Sources */,
 				B46CA75D2BB83C4F00B1221D /* Constants.swift in Sources */,
 				B45029642BB9C9B900E3E6C8 /* SplashScreenView.swift in Sources */,
-				B46CA7172BB838A100B1221D /* MainViewController.swift in Sources */,
-				B4342C992BB9AC1F004D109A /* MainViewControllerWithTableView.swift in Sources */,
+				B4342C992BB9AC1F004D109A /* MainViewController.swift in Sources */,
 				B46CA75B2BB83C3900B1221D /* MainNetworkConstants.swift in Sources */,
 				B45029622BB9C98C00E3E6C8 /* Background.swift in Sources */,
 				B46CA7132BB838A100B1221D /* AppDelegate.swift in Sources */,
