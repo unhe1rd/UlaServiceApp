@@ -1,22 +1,22 @@
 //
-//  ServiceCell.swift
+//  TableCell.swift
 //  UlaServiceApp
 //
-//  Created by Mike Ulanov on 30.03.2024.
+//  Created by Mike Ulanov on 31.03.2024.
 //
 
 import UIKit
 import Kingfisher
 
-final class MainServiceCell: UICollectionViewCell {
+final class TableCell: UITableViewCell {
     
     private let titleLabel = UILabel()
     private let appImage = UIImageView()
     private let descriptionLabel = UILabel()
     
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         setupCell()
     }
     
@@ -36,7 +36,7 @@ final class MainServiceCell: UICollectionViewCell {
     }
 }
 
-private extension MainServiceCell {
+private extension TableCell {
     func setupCell() {
         
         setupAppImage()
@@ -52,7 +52,7 @@ private extension MainServiceCell {
         NSLayoutConstraint.activate([
             appImage.widthAnchor.constraint(equalToConstant: imageSize),
             appImage.heightAnchor.constraint(equalToConstant: imageSize),
-            appImage.leadingAnchor.constraint(equalTo: leadingAnchor),
+            appImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             appImage.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }

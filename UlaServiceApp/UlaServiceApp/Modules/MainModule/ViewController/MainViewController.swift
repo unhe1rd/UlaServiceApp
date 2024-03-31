@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController{
+final class MainViewController: UIViewController{
     //ViewController Properties
     private let output: MainViewOutput
     private var mainModel: MainViewModel?
@@ -89,13 +89,13 @@ extension MainViewController: UICollectionViewDataSource {
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = collectionView.frame.width
-        let cellHeight = collectionView.frame.height
+//        let cellHeight = collectionView.frame.height
 //        return CGSize(width: cellWidth, height: cellHeight)
         return CGSize(width: cellWidth, height: 100)
-    } //сделать расчет динамической высоты
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 8, bottom: 0, right: -8)
+        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: -16)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

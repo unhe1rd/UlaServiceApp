@@ -18,16 +18,8 @@ final class MainPresenter {
 extension MainPresenter: MainModuleInput {}
 
 extension MainPresenter: MainViewOutput {
-    func didTapOnCell(_ url: String) {
-        if let url = URL(string: "https://my.games/") {
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                if let webURL = URL(string: "https://my.games/") {
-                    UIApplication.shared.open(webURL)
-                }
-            }
-        }
+    func didTapOnCell(_ urlToOpen: String) {
+        DeeplinkManager.shared.open(urlString: urlToOpen)
     }
     
     func didLoadView() {

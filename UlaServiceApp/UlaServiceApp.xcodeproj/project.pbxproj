@@ -3,12 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4342C8A2BB9A321004D109A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B4342C892BB9A321004D109A /* AlamofireDynamic */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B4342C8C2BB9A321004D109A /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B4342C892BB9A321004D109A /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B4342C912BB9A6E7004D109A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B4342C902BB9A6E7004D109A /* Alamofire */; };
+		B4342C932BB9A6EF004D109A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B4342C922BB9A6EF004D109A /* Alamofire */; };
+		B4342C952BB9A6F4004D109A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B4342C942BB9A6F4004D109A /* Alamofire */; };
+		B4342C972BB9A87D004D109A /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C962BB9A87D004D109A /* DeeplinkManager.swift */; };
+		B4342C992BB9AC1F004D109A /* MainViewControllerWithTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C982BB9AC1F004D109A /* MainViewControllerWithTableView.swift */; };
+		B4342C9B2BB9AD1B004D109A /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C9A2BB9AD1B004D109A /* TableCell.swift */; };
+		B4342C9D2BB9AD8F004D109A /* TableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4342C9C2BB9AD8F004D109A /* TableHeader.swift */; };
 		B46CA7132BB838A100B1221D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7122BB838A100B1221D /* AppDelegate.swift */; };
 		B46CA7152BB838A100B1221D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7142BB838A100B1221D /* SceneDelegate.swift */; };
 		B46CA7172BB838A100B1221D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7162BB838A100B1221D /* MainViewController.swift */; };
@@ -24,12 +29,7 @@
 		B46CA7582BB83C0200B1221D /* MainNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7572BB83C0200B1221D /* MainNetworkResponse.swift */; };
 		B46CA75B2BB83C3900B1221D /* MainNetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA75A2BB83C3900B1221D /* MainNetworkConstants.swift */; };
 		B46CA75D2BB83C4F00B1221D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA75C2BB83C4F00B1221D /* Constants.swift */; };
-		B46CA7602BB83E0B00B1221D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA75F2BB83E0B00B1221D /* Alamofire */; };
 		B46CA7652BB83EBF00B1221D /* MainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA74B2BB83B3000B1221D /* MainManager.swift */; };
-		B46CA7672BB83F4000B1221D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA7662BB83F4000B1221D /* Alamofire */; };
-		B46CA7692BB83F4000B1221D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA7682BB83F4000B1221D /* AlamofireDynamic */; };
-		B46CA76B2BB83F6200B1221D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA76A2BB83F6200B1221D /* Alamofire */; };
-		B46CA76D2BB83F6200B1221D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA76C2BB83F6200B1221D /* AlamofireDynamic */; };
 		B46CA7712BB8572500B1221D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B46CA7702BB8572500B1221D /* Kingfisher */; };
 		B46CA7732BB8609600B1221D /* MainServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7722BB8609600B1221D /* MainServiceCell.swift */; };
 		B46CA7752BB8DB9D00B1221D /* MainHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46CA7742BB8DB9D00B1221D /* MainHeaderCell.swift */; };
@@ -59,7 +59,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B4342C8C2BB9A321004D109A /* AlamofireDynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,13 +66,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B4342C962BB9A87D004D109A /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
+		B4342C982BB9AC1F004D109A /* MainViewControllerWithTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerWithTableView.swift; sourceTree = "<group>"; };
+		B4342C9A2BB9AD1B004D109A /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		B4342C9C2BB9AD8F004D109A /* TableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeader.swift; sourceTree = "<group>"; };
 		B46CA70F2BB838A100B1221D /* UlaServiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UlaServiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46CA7122BB838A100B1221D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B46CA7142BB838A100B1221D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B46CA7162BB838A100B1221D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B46CA71B2BB838A600B1221D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B46CA71E2BB838A600B1221D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B46CA7202BB838A600B1221D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B46CA7202BB838A600B1221D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "UlaServiceApp/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		B46CA7252BB838A700B1221D /* UlaServiceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UlaServiceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46CA7292BB838A700B1221D /* UlaServiceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UlaServiceAppTests.swift; sourceTree = "<group>"; };
 		B46CA72F2BB838A700B1221D /* UlaServiceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UlaServiceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,8 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B46CA7712BB8572500B1221D /* Kingfisher in Frameworks */,
-				B4342C8A2BB9A321004D109A /* AlamofireDynamic in Frameworks */,
-				B46CA7602BB83E0B00B1221D /* Alamofire in Frameworks */,
+				B4342C912BB9A6E7004D109A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B46CA7672BB83F4000B1221D /* Alamofire in Frameworks */,
-				B46CA7692BB83F4000B1221D /* AlamofireDynamic in Frameworks */,
+				B4342C932BB9A6EF004D109A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B46CA76B2BB83F6200B1221D /* Alamofire in Frameworks */,
-				B46CA76D2BB83F6200B1221D /* AlamofireDynamic in Frameworks */,
+				B4342C952BB9A6F4004D109A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +184,7 @@
 				B46CA71D2BB838A600B1221D /* LaunchScreen.storyboard */,
 				B46CA7202BB838A600B1221D /* Info.plist */,
 				B46CA71B2BB838A600B1221D /* Assets.xcassets */,
+				B4342C962BB9A87D004D109A /* DeeplinkManager.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -224,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				B46CA7162BB838A100B1221D /* MainViewController.swift */,
+				B4342C982BB9AC1F004D109A /* MainViewControllerWithTableView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -257,6 +259,9 @@
 			isa = PBXGroup;
 			children = (
 				B46CA7722BB8609600B1221D /* MainServiceCell.swift */,
+				B46CA7742BB8DB9D00B1221D /* MainHeaderCell.swift */,
+				B4342C9A2BB9AD1B004D109A /* TableCell.swift */,
+				B4342C9C2BB9AD8F004D109A /* TableHeader.swift */,
 			);
 			path = "Subviews and Cells";
 			sourceTree = "<group>";
@@ -282,7 +287,6 @@
 			children = (
 				B46CA75A2BB83C3900B1221D /* MainNetworkConstants.swift */,
 				B46CA75C2BB83C4F00B1221D /* Constants.swift */,
-				B46CA7742BB8DB9D00B1221D /* MainHeaderCell.swift */,
 			);
 			path = MainModuleConstants;
 			sourceTree = "<group>";
@@ -305,9 +309,8 @@
 			);
 			name = UlaServiceApp;
 			packageProductDependencies = (
-				B46CA75F2BB83E0B00B1221D /* Alamofire */,
 				B46CA7702BB8572500B1221D /* Kingfisher */,
-				B4342C892BB9A321004D109A /* AlamofireDynamic */,
+				B4342C902BB9A6E7004D109A /* Alamofire */,
 			);
 			productName = UlaServiceApp;
 			productReference = B46CA70F2BB838A100B1221D /* UlaServiceApp.app */;
@@ -328,8 +331,7 @@
 			);
 			name = UlaServiceAppTests;
 			packageProductDependencies = (
-				B46CA7662BB83F4000B1221D /* Alamofire */,
-				B46CA7682BB83F4000B1221D /* AlamofireDynamic */,
+				B4342C922BB9A6EF004D109A /* Alamofire */,
 			);
 			productName = UlaServiceAppTests;
 			productReference = B46CA7252BB838A700B1221D /* UlaServiceAppTests.xctest */;
@@ -350,8 +352,7 @@
 			);
 			name = UlaServiceAppUITests;
 			packageProductDependencies = (
-				B46CA76A2BB83F6200B1221D /* Alamofire */,
-				B46CA76C2BB83F6200B1221D /* AlamofireDynamic */,
+				B4342C942BB9A6F4004D109A /* Alamofire */,
 			);
 			productName = UlaServiceAppUITests;
 			productReference = B46CA72F2BB838A700B1221D /* UlaServiceAppUITests.xctest */;
@@ -381,7 +382,7 @@
 				};
 			};
 			buildConfigurationList = B46CA70A2BB838A100B1221D /* Build configuration list for PBXProject "UlaServiceApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -437,17 +438,21 @@
 			files = (
 				B46CA7652BB83EBF00B1221D /* MainManager.swift in Sources */,
 				B46CA7752BB8DB9D00B1221D /* MainHeaderCell.swift in Sources */,
+				B4342C9B2BB9AD1B004D109A /* TableCell.swift in Sources */,
 				B46CA7492BB83B1200B1221D /* MainProtocols.swift in Sources */,
 				B46CA75D2BB83C4F00B1221D /* Constants.swift in Sources */,
 				B46CA7172BB838A100B1221D /* MainViewController.swift in Sources */,
+				B4342C992BB9AC1F004D109A /* MainViewControllerWithTableView.swift in Sources */,
 				B46CA75B2BB83C3900B1221D /* MainNetworkConstants.swift in Sources */,
 				B46CA7132BB838A100B1221D /* AppDelegate.swift in Sources */,
+				B4342C9D2BB9AD8F004D109A /* TableHeader.swift in Sources */,
 				B46CA7582BB83C0200B1221D /* MainNetworkResponse.swift in Sources */,
 				B46CA74F2BB83B4800B1221D /* MainAssembly.swift in Sources */,
 				B46CA7532BB83B7300B1221D /* MainPresenter.swift in Sources */,
 				B46CA7732BB8609600B1221D /* MainServiceCell.swift in Sources */,
 				B46CA7152BB838A100B1221D /* SceneDelegate.swift in Sources */,
 				B46CA7562BB83B9C00B1221D /* MainViewModel.swift in Sources */,
+				B4342C972BB9A87D004D109A /* DeeplinkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,7 +552,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -604,7 +609,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -623,7 +628,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TGA6X3S6V7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UlaServiceApp/Info.plist;
+				INFOPLIST_FILE = "UlaServiceApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -636,6 +641,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VkEdTeam.UlaServiceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -651,7 +659,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TGA6X3S6V7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UlaServiceApp/Info.plist;
+				INFOPLIST_FILE = "UlaServiceApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -664,6 +672,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VkEdTeam.UlaServiceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -679,10 +690,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TGA6X3S6V7;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VkEdTeam.UlaServiceAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -699,10 +713,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TGA6X3S6V7;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VkEdTeam.UlaServiceAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -718,9 +735,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TGA6X3S6V7;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VkEdTeam.UlaServiceAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -736,9 +757,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TGA6X3S6V7;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VkEdTeam.UlaServiceAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -807,35 +832,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B4342C892BB9A321004D109A /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
-		B46CA75F2BB83E0B00B1221D /* Alamofire */ = {
+		B4342C902BB9A6E7004D109A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		B46CA7662BB83F4000B1221D /* Alamofire */ = {
+		B4342C922BB9A6EF004D109A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		B46CA7682BB83F4000B1221D /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
-		B46CA76A2BB83F6200B1221D /* Alamofire */ = {
+		B4342C942BB9A6F4004D109A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		B46CA76C2BB83F6200B1221D /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B46CA75E2BB83CCE00B1221D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 		B46CA7702BB8572500B1221D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
