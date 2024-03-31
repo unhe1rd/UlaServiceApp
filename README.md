@@ -4,9 +4,7 @@
 Очень просто установить:
 ```console
   git clone git@github.com:unhe1rd/UlaServiceApp.git
-
-  #or
-  
+  //or
   git clone https://github.com/unhe1rd/UlaServiceApp.git
 ```
 
