@@ -32,6 +32,7 @@ final class MainServiceCell: UICollectionViewCell {
             print("Неверный URL изображения")
         }
         descriptionLabel.text = model.description
+        titleLabel.text = model.title
     }
 }
 
@@ -39,6 +40,7 @@ private extension MainServiceCell {
     func setupCell() {
         
         setupAppImage()
+        setupTitleLabel()
         setupDescriptionLabel()
     }
     
@@ -50,8 +52,22 @@ private extension MainServiceCell {
         NSLayoutConstraint.activate([
             appImage.widthAnchor.constraint(equalToConstant: imageSize),
             appImage.heightAnchor.constraint(equalToConstant: imageSize),
-            appImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            appImage.topAnchor.constraint(equalTo: topAnchor, constant: 12)
+            appImage.leadingAnchor.constraint(equalTo: leadingAnchor),
+            appImage.topAnchor.constraint(equalTo: topAnchor)
+        ])
+    }
+    
+    func setupTitleLabel(){
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textColor = Constants.textColor
+        titleLabel.textAlignment = .left
+        titleLabel.font = .boldSystemFont(ofSize: 16)
+        
+        NSLayoutConstraint.activate([
+            titleLabel.leadingAnchor.constraint(equalTo: appImage.trailingAnchor, constant: 8),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor)
         ])
     }
     
@@ -65,7 +81,7 @@ private extension MainServiceCell {
         NSLayoutConstraint.activate([
             descriptionLabel.leadingAnchor.constraint(equalTo: appImage.trailingAnchor, constant: 8),
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            descriptionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 12)
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4)
         ])
     }
 }

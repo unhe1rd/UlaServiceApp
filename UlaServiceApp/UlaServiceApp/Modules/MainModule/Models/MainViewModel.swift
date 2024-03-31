@@ -13,7 +13,6 @@ struct MainViewModel {
 }
 
 struct ServicesModel {
-    
     let image: String
     let title: String
     let description: String

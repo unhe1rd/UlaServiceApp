@@ -40,8 +40,7 @@ class MainViewController: UIViewController{
 
 private extension MainViewController {
     func setupUI(){
-        view.backgroundColor = .red
-        
+        view.backgroundColor = Constants.backgroundColor
         setupCollectionView()
     }
     
@@ -51,8 +50,7 @@ private extension MainViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(MainServiceCell.self, forCellWithReuseIdentifier: "MainServiceCell")
-//            collectionView.register(MainServiceCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MainServiceCell.identifier)
-        collectionView.backgroundColor = .white
+            collectionView.register(MainHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MainHeaderView.identifier)
         collectionView.showsVerticalScrollIndicator = false
             
         NSLayoutConstraint.activate([
@@ -73,11 +71,15 @@ extension MainViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+       let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MainHeaderView.identifier, for: indexPath) as! MainHeaderView
+       return header
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection: Int) -> CGSize {
         return CGSize(width: view.frame.size.width, height: 30)
     }
 
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return mainCellModel.count
     }
@@ -86,13 +88,14 @@ extension MainViewController: UICollectionViewDataSource {
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let collectionViewWidth = collectionView.frame.width
-        let cellWidth = (collectionViewWidth - 20)
-        return CGSize(width: cellWidth, height: cellWidth * 0.2)
-    }
+        let cellWidth = collectionView.frame.width
+        let cellHeight = collectionView.frame.height
+//        return CGSize(width: cellWidth, height: cellHeight)
+        return CGSize(width: cellWidth, height: 100)
+    } //сделать расчет динамической высоты
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: -8)
+        return UIEdgeInsets(top: 10, left: 8, bottom: 0, right: -8)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -102,11 +105,15 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
+    
 }
 
 
 extension MainViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(#function)
+        output.didTapOnCell(mainCellModel[indexPath.row].link)
+    }
 }
 
 //Setup View by Presenter

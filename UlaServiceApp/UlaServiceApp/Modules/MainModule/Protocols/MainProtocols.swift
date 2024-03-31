@@ -20,4 +20,5 @@ protocol MainViewInput: AnyObject {
 
 protocol MainViewOutput: AnyObject {
     func didLoadView()
+    func didTapOnCell(_ url: String)
 }

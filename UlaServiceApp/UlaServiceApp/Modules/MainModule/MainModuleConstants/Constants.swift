@@ -9,4 +9,5 @@ import UIKit
 
 enum Constants{
     static let textColor = UIColor.darkText
+    static let backgroundColor = UIColor.white
 }
