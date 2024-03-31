@@ -1,9 +1,10 @@
 //
-//  SplashScreenView.swift
+//  Background.swift
 //  UlaServiceApp
 //
 //  Created by Mike Ulanov on 31.03.2024.
 //
+
 
 import SwiftUI
 

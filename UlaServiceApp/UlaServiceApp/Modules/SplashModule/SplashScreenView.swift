@@ -1,5 +1,5 @@
 //
-//  Background.swift
+//  SplashScreenView.swift
 //  UlaServiceApp
 //
 //  Created by Mike Ulanov on 31.03.2024.
