@@ -1,22 +1,19 @@
 //
-//  ViewController.swift
+//  MainViewControllerWithTableView.swift
 //  UlaServiceApp
 //
-//  Created by Mike Ulanov on 30.03.2024.
+//  Created by Mike Ulanov on 31.03.2024.
 //
+
 
 import UIKit
 
-final class MainViewController: UIViewController{
+class MainViewController: UIViewController{
     //ViewController Properties
     private let output: MainViewOutput
     private var mainModel: MainViewModel?
     private var mainCellModel: [ServicesModel] = []
-    
-    private let collectionView: UICollectionView = {
-            let layout = UICollectionViewFlowLayout()
-            return UICollectionView(frame: .zero, collectionViewLayout: layout)
-    }()
+    private let tableView = UITableView()
     
     
     init(output: MainViewOutput) {
@@ -40,90 +37,77 @@ final class MainViewController: UIViewController{
 
 private extension MainViewController {
     func setupUI(){
-        view.backgroundColor = Constants.backgroundColor
-        setupCollectionView()
+        setupTableView()
     }
     
-    func setupCollectionView() {
-        view.addSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(MainServiceCell.self, forCellWithReuseIdentifier: "MainServiceCell")
-            collectionView.register(MainHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MainHeaderView.identifier)
-        collectionView.showsVerticalScrollIndicator = false
-            
+    func setupTableView(){
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.layer.cornerRadius = 16
+        tableView.register(TableCell.self, forCellReuseIdentifier: "TableCell")
+        tableView.showsVerticalScrollIndicator = false
+        
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
 
 
-extension MainViewController: UICollectionViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainServiceCell", for: indexPath) as! MainServiceCell
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mainCellModel.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! TableCell
+        cell.accessoryType = .disclosureIndicator
         cell.configure(with: mainCellModel[indexPath.row])
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-       let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MainHeaderView.identifier, for: indexPath) as! MainHeaderView
-       return header
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 64
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection: Int) -> CGSize {
-        return CGSize(width: view.frame.size.width, height: 30)
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = TableHeader()
+        return headerView
     }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mainCellModel.count
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.cellForRow(at: indexPath) != nil {
+            output.didTapOnCell(mainCellModel[indexPath.row].link)
+        }
+        
+        if let selectedIndexPath = tableView.indexPathsForSelectedRows?.first {
+            tableView.deselectRow(at: selectedIndexPath, animated: true)
+        }
     }
 }
 
-
-extension MainViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = collectionView.frame.width
-//        let cellHeight = collectionView.frame.height
-//        return CGSize(width: cellWidth, height: cellHeight)
-        return CGSize(width: cellWidth, height: 100)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: -16)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-    
-}
-
-
-extension MainViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(#function)
-        output.didTapOnCell(mainCellModel[indexPath.row].link)
-    }
-}
 
 //Setup View by Presenter
 extension MainViewController: MainViewInput {
     
     func configure(with model: MainViewModel) {
         self.mainCellModel = model.services
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
+        DispatchQueue.main.async { [self] in
+            tableView.reloadData()
         }
     }
 }
-

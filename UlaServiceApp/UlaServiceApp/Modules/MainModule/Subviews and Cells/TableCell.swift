@@ -62,7 +62,7 @@ private extension TableCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = Constants.textColor
         titleLabel.textAlignment = .left
-        titleLabel.font = .boldSystemFont(ofSize: 16)
+        titleLabel.font = .boldSystemFont(ofSize: 18)
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: appImage.trailingAnchor, constant: 8),
@@ -71,18 +71,20 @@ private extension TableCell {
         ])
     }
     
-    func setupDescriptionLabel(){
+    func setupDescriptionLabel() {
         addSubview(descriptionLabel)
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.textColor = Constants.textColor
-        descriptionLabel.font = .systemFont(ofSize: 12)
+        descriptionLabel.font = .systemFont(ofSize: 14)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .left
-        
+
         NSLayoutConstraint.activate([
             descriptionLabel.leadingAnchor.constraint(equalTo: appImage.trailingAnchor, constant: 8),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4)
+            descriptionLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -48),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -8)
         ])
     }
+
 }

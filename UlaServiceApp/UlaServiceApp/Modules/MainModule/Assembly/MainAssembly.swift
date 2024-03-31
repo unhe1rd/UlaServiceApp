@@ -12,7 +12,7 @@ import UIKit
 final class MainAssembly {
     static func assembly(moduleOutput: MainModuleOutput? = nil) -> UIViewController {
         let presenter = MainPresenter()
-        let viewController = MainViewControllerWithTableView(output: presenter)
+        let viewController = MainViewController(output: presenter)
 
         presenter.view = viewController
         presenter.moduleOutput = moduleOutput

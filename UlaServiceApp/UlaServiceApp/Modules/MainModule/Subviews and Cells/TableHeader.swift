@@ -23,7 +23,6 @@ final class TableHeader: UIView {
     }
     
     public func setupMainHeaderView() {
-        backgroundColor = .white
         setupHeaderLabel()
     }
     
@@ -32,7 +31,7 @@ final class TableHeader: UIView {
         addSubview(headerLabel)
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
         headerLabel.text = "Сервисы"
-        headerLabel.font = .systemFont(ofSize: 24)
+        headerLabel.font = .boldSystemFont(ofSize: 24)
         headerLabel.textAlignment = .center
         headerLabel.textColor = Constants.textColor
         
@@ -40,7 +39,7 @@ final class TableHeader: UIView {
             headerLabel.topAnchor.constraint(equalTo: topAnchor),
             headerLabel.leftAnchor.constraint(equalTo: leftAnchor),
             headerLabel.rightAnchor.constraint(equalTo: rightAnchor),
-            headerLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
+            headerLabel.heightAnchor.constraint(equalToConstant: 32)
         ])
     }
 }
