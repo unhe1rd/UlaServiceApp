@@ -16,16 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let splashScreen = UIHostingController(rootView: SplashScreenView())
+//        let splashScreen = UIHostingController(rootView: SplashScreenView())
         let viewController = MainAssembly.assembly()
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = splashScreen
+        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.window?.rootViewController = viewController
-        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
